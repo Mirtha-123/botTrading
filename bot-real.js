@@ -6,7 +6,7 @@ const express = require('express');
 const path = require('path');
 
 // Configuración
-const MONGO_URI = process.env.MONGO_URI || 'mongodb://localhost:27017';
+const MONGO_URI = process.env.MONGO_URI || 'mongodb://127.0.0.1:27017';  // Usa 127.0.0.1 en lugar de localhost (::1 puede causar problemas en IPv6).
 const DB_NAME = 'trading_bot';
 const TRANSACTIONS_COLLECTION = 'real_transactions';
 const BOT_STATE_COLLECTION = 'bot_state';

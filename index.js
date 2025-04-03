@@ -291,7 +291,7 @@ app.get('/', (req, res) => {
 // Configurar el servidor
 const PORT = 3000;
 app.listen(PORT, async () => {
-  console.log(`Servidor corriendo en http://localhost:${PORT}`);
+  console.log(`Servidor corriendo en http://localhost:${PORT}  ${process.env.BINANCE_API_KEY}` );
   // Iniciar conexión a MongoDB y luego la simulación
   await connectToMongo();
   simulateWithStrategy('BTCUSDT', 2025, 1, '5m', 0.00104); 
